@@ -1,3 +1,4 @@
+
 class Pared {
 	var property ancho
 	var material

@@ -1,3 +1,5 @@
+import Obstaculo.*
+
 object islaPajaro {
 	
 	const pajaros = []
