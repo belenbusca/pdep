@@ -2,15 +2,15 @@ import EstadoDeAnimo.*
 
 class Tamagotchi {
 	
-	var estadoDeAnimo = contento
+	var estadoDeAnimo = new Contento()
 	var nivelFelicidad = 0
 	
 	method comer() {
 		estadoDeAnimo.comer(self)
 	}
 	
-	method jugarSolo() {
-		estadoDeAnimo.jugarSolo(self)
+	method jugar() {
+		estadoDeAnimo.jugar(self)
 	}
 	
 	method jugarCon(otraMascota) {
@@ -59,7 +59,7 @@ class Antisocial inherits Tamagotchi {
 
 class Dormilon inherits Tamagotchi {
 	
-	override method jugarSolo() {
+	override method jugar() {
 		super()
 		if(nivelFelicidad < 10) self.poneteCansado()
 	}
