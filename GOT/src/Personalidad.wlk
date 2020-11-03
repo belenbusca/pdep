@@ -1,9 +1,11 @@
-import Continente.*
+import Casa.*
 
 object sutil {
+	const casas = [lannister, stark, guardiaDeLaNoche]
 	method conspirarContra(conspirador, unaPersona) {
-		const casa = poniente.casaMasPobre()
-		const miembroDeLaCasaMasPobre = casa.miembros().anyOne()
+	
+		const casaMasPobre = casas.min{ casa => casa.patrimonio() }
+		const miembroDeLaCasaMasPobre = casaMasPobre.miembros().anyOne()
 		
 		if(casa.miembrosSolterosYVivos().isEmpty() or !unaPersona.puedeCasarseCon(miembroDeLaCasaMasPobre))
 			throw new Exception(message = "Oops! No hay con quien casar al objetivo D:")

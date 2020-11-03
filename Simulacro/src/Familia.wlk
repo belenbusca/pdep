@@ -75,30 +75,31 @@ class MiembroDeFamilia {
 	var lealtad
 	var rango = new Soldado()
 	const armas = [escopeta]
-	var estado = vivo
+	var estaVivo = true
+	var estaHerido = false
 
 	method lealtad() {
 		return lealtad
 	}
 	
 	method morir() {
-		estado = "muerto"
+		estaVivo = false
 	}
 	
 	method serHerida() {
-		estado = "herido"
+		estaHerido = true
 	}
 	
 	method estaMuerto() {
-		return estado == "muerto"
+		return !estaVivo
 	}
 	
 	method estaHerido() {
-		return estado == "herido"
+		return estaHerido
 	}
 	
 	method estaVivo() {
-		return estado == "vivo"
+		return estaVivo
 	}
 	
 	method atacar(victima) {

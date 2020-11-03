@@ -35,10 +35,10 @@ object escopeta inherits Arma {
 
 class CuerdaDePiano inherits Arma {
 	
-	var esBuenaCalidad
+	var esDeBuenaCalidad
 	
 	method disparar(victima) {
-		if(esBuenaCalidad) self.matar(victima)
+		if(esDeBuenaCalidad) self.matar(victima)
 	}
 	
 	method esSutil() {

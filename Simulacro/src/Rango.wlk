@@ -2,7 +2,7 @@ import Familia.*
 
 class Don {
 	
-	const subordinados = []
+	const subordinados = #{}
 	
 	method atacar(victima, armas) {
 		subordinados.anyOne().atacar(victima)
@@ -24,7 +24,7 @@ object donVito inherits Don {
 
 class Subjefe {
 	
-	const subordinados = []
+	const subordinados = #{}
 	const armasUtilizadas = []
 	
 	method atacar(victima, armas) {
